@@ -20,11 +20,10 @@
             padding: 0;
         }
         header {
-            /* This creates a 70% transparent blue overlay */
             background: linear-gradient(rgba(0, 40, 104, 0.7), rgba(0, 40, 104, 0.7)), url('header-bg.jpg');
             background-size: cover;
             background-position: center;
-            background-color: #002868; /* Fallback deep navy */
+            background-color: #002868;
             color: white;
             padding: 8rem 1rem;
             text-align: center;
@@ -32,26 +31,16 @@
         }
         .container {
             max-width: 850px;
-            margin: -5rem auto 5rem;
-            padding: 4rem;
+            /* Moved down from -5rem to -3rem for less header overlap */
+            margin: -3rem auto 5rem; 
+            /* Reduced top padding from 4rem to 2rem to remove excess whitespace */
+            padding: 2rem 4rem 4rem 4rem;
             background: white;
             box-shadow: 0 20px 50px rgba(0,0,0,0.2);
             border-radius: 4px;
         }
-        .nav-back {
-            display: inline-block;
-            margin-bottom: 2.5rem;
-            color: var(--usa-blue);
-            text-decoration: none;
-            font-weight: bold;
-            font-family: sans-serif;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 2px solid var(--usa-red);
-        }
         h1 { font-family: sans-serif; letter-spacing: 4px; text-transform: uppercase; margin: 0; font-size: 2.8rem; }
-        .date-section { margin-top: 6rem; }
+        .date-section { margin-top: 4rem; }
         .date-badge {
             display: inline-block;
             background: var(--usa-red);
@@ -73,7 +62,6 @@
         }
         p { margin-bottom: 2rem; font-size: 1.2rem; text-align: left; }
         
-        /* PHOTO STYLING */
         .photo-box {
             margin: 3rem -4rem;
             text-align: center;
@@ -88,7 +76,6 @@
             border: 4px solid white;
         }
         
-        /* SIDE-BY-SIDE GRID */
         .photo-row {
             display: flex;
             gap: 15px;
@@ -132,7 +119,6 @@
             font-family: sans-serif;
         }
 
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
             .container { padding: 1.5rem; margin: 0 auto; width: 90%; }
             .photo-row { flex-direction: column; margin: 2rem 0; }
@@ -164,7 +150,7 @@
 
             <div class="photo-box" style="max-width: 500px; margin-left: auto; margin-right: auto;">
                 <img src="selfie-jack-meetup.jpg" alt="Meetup with Jack Seney">
-                <span class="caption">Vertical: Nightcap with Jack.</span>
+                <span class="caption">Nightcap with Jack.</span>
             </div>
         </div>
 
@@ -175,11 +161,11 @@
             <div class="photo-row">
                 <div class="item">
                     <img src="sweden-game.jpg" alt="USA vs Sweden">
-                    <span class="caption">Vertical: USA vs. Sweden.</span>
+                    <span class="caption">USA vs. Sweden.</span>
                 </div>
                 <div class="item">
                     <img src="corona-cups.jpg" alt="Olympic Corona Cups">
-                    <span class="caption">Vertical: The summery Corona cups.</span>
+                    <span class="caption">The summery Corona cups.</span>
                 </div>
             </div>
 
@@ -299,11 +285,11 @@
             <div class="photo-row">
                 <div class="item">
                     <img src="selfie-quinn.jpg" alt="Quinn">
-                    <span class="caption">Vertical: Quinn Hughes.</span>
+                    <span class="caption">Quinn Hughes.</span>
                 </div>
                 <div class="item">
                     <img src="selfie-eruzione.jpg" alt="Eruzione">
-                    <span class="caption">Vertical: The Captain.</span>
+                    <span class="caption">The Captain.</span>
                 </div>
             </div>
 
@@ -314,18 +300,18 @@
                 </div>
                 <div class="item">
                     <img src="colin-jack.jpg" alt="Colin and Jack">
-                    <span class="caption">Vertical: Colin and Jack.</span>
+                    <span class="caption">Colin and Jack.</span>
                 </div>
             </div>
 
             <div class="photo-row">
                 <div class="item">
                     <img src="tkachuks.jpg" alt="The Tkachuks">
-                    <span class="caption">Vertical: The Tkachuk family.</span>
+                    <span class="caption">The Tkachuk family.</span>
                 </div>
                 <div class="item">
                     <img src="eichel-mcavoy.jpg" alt="Eichel and McAvoy">
-                    <span class="caption">Vertical: McAvoy and Eichel.</span>
+                    <span class="caption">McAvoy and Eichel.</span>
                 </div>
             </div>
 
