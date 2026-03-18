@@ -25,21 +25,22 @@
             background-position: center;
             background-color: #002868;
             color: white;
-            padding: 10rem 1rem; /* Slightly taller header for more photo impact */
+            padding: 10rem 1rem;
             text-align: center;
             border-bottom: 8px solid var(--usa-red);
         }
         .container {
             max-width: 850px;
-            margin: 0 auto 5rem; /* Removed the negative overlap to show full header */
-            padding: 2rem 4rem 4rem 4rem; /* Tightened top padding */
+            margin: -1.5rem auto 5rem; /* THE TWEAK: Slight vertical overlap */
+            padding: 3rem 4rem 4rem 4rem; /* THE TWEAK: Balanced top spacing */
             background: white;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            border-radius: 0 0 4px 4px;
+            border-radius: 4px; /* Added slight radius to the top for a polished look */
+            position: relative; /* Ensures it sits on top of the header border */
         }
         h1 { font-family: sans-serif; letter-spacing: 4px; text-transform: uppercase; margin: 0; font-size: 2.8rem; }
         .date-section { margin-top: 4rem; }
-        .date-section:first-of-type { margin-top: 0; } /* Removes whitespace at the very top */
+        .date-section:first-of-type { margin-top: 0; }
         
         .date-badge {
             display: inline-block;
@@ -120,9 +121,14 @@
         }
 
         @media (max-width: 768px) {
-            .container { padding: 1.5rem; width: 100%; box-sizing: border-box; }
-            .photo-row { flex-direction: column; margin: 2rem 0; }
-            .photo-box { margin: 2rem 0; }
+            .container { 
+                padding: 2rem 1.5rem; 
+                width: 95%; 
+                margin: -1rem auto 2rem; 
+                box-sizing: border-box; 
+            }
+            .photo-row { flex-direction: column; margin: 2rem -1.5rem; }
+            .photo-box { margin: 2rem -1.5rem; }
             h1 { font-size: 1.8rem; }
         }
     </style>
@@ -167,9 +173,7 @@
             </div>
 
             <p>Connor and I had seats together for the 9:15pm quarterfinal matchup of USA vs. Sweden. Watching Team USA come onto the ice in glorious blue against Sweden’s iconic Tre Kroner yellow jersey, I couldn’t help but think of Herb Brooks (ok, Kurt Russell) angrily yelling “you’re playing SWEDEN…IN THE OLYMPICS!” in Miracle. This was my first ever glimpse of the USA hockey team live in person - something I have quite literally been dreaming about for as long as I can remember. I was beyond pumped up.</p>
-
             <p>After a scoreless first period, we took to the concourse. Shockingly, the only beer served at the Olympic events was the summery (and overrated) Corona, but at least they came in cool cups.</p>
-
             <p>Naturally, I was wearing my favorite hometown player’s jersey in Milan. A Michigan Wolverine who went on to become captain of the Detroit Red Wings and key player & leader for Team USA, Dylan Larkin. As we got through the beer line after that first intermission, Connor pointed out a big group of people also wearing #21 jerseys and so I absolutely had to go say hello and introduce myself. It turned out to be Kevin Larkin (his dad), Colin Larkin (his brother), and a whole crew of family and friends that had traveled to Milan. We had some fun chatting and they couldn’t have been nicer people who I would end up seeing at nearly every intermission of each USA men’s game through the rest of the tournament. I’m sure they were meeting a ton of people, but I think Kevin’s dad thought I was somehow connected to the Clayton Keller group. At first I tried to explain that I’m just a fan, but eventually I thought it best to just roll with it, an attitude that would continue to pay dividends for me on this trip.</p>
 
             <div class="photo-row">
@@ -204,7 +208,6 @@
             </div>
 
             <p>The game was intense. Canada took the lead with a strong individual effort on a short-handed goal and backed it up with incredible defending making USA look like a shell of its usual self. It got really nerve wracking as the clock wound down in the third period, until the most decorated woman in USA hockey history, Hilary Knight, tipped in a shot in front of the net with the goalie pulled to tie the game in the dying minutes. The game was on to OT, for Olympic Gold. I had chills.</p>
-
             <p>Both teams did look nervous out of the gate for 3-on-3 overtime. The first few minutes didn’t have a great flow with mishandled and sloppy play all around. Finally a break occurred with a long outlet pass during a bad change and American hero Megan Keller, of Green Valley Estates in Farmington Hills, MI, pulled off the “Star-Spangled Dangle” golden goal to bring home a gold medal in epic fashion. Connor and I were in disbelief at what we just saw and the fact that our hometown hero had pulled that off. Absolutely unreal. We watched the anthems and celebrations until the very last player left the ice and were so happy and thankful to be able to witness such an incredible moment.</p>
 
             <div class="photo-row">
@@ -261,7 +264,6 @@
             <p>For the championship game, the pregame ritual shifted. Connor had already headed home, so Davidson and I took the train out toward the rink, settling in for some high-stakes beers at the shuttle point. We were hours early, but we were already feeling the nerves. This was the matchup we’ve been waiting for since 2010 and we wanted redemption. The energy started to build as the crowd grew around the bars, which led to completing chants of “USA!” and “Canada!” Eventually, we had to make our way to the rink. Inside the concourse, I spotted Dylan Larkin’s family again; at every intermission, I made a point to find his brother Colin for a quick fist-bump for good luck.</p>
 
             <p>To be honest, the game itself is a blur of adrenaline and anxiety. I had an incredible lower-bowl seat for by far the fastest game of hockey that I’ve ever seen, and probably the fastest that’s ever been played. And I was a nervous wreck the entire time. Right in front of me at our end, Canada had chance after chance, and I watched Connor Hellebuyck put on one of the all time greatest goaltending performances. The highs, lows, and momentum swings in the game were absolutely insane. One minute we’re desperately killing a 5-on-3 penalty against the best power play group ever assembled, the next we’ve got a 4-minute double minor power play in the dying minutes with a chance to win it, and just like that we give the penalty back for another terrifying penalty kill at the most critical point in the game.</p>
-
             <p>When the game went to overtime, I couldn't sit still. I was pacing the concourse, of course found Colin Larkin for good luck, but otherwise didn’t really know what to do with myself. I made sure to get back to my seat with plenty of time to spare and watched the zambonis for what felt like an eternity. Finally, it was time. Sudden death 3-on-3 overtime for Olympic Gold. It literally does not get bigger than this in the hockey world and knew that no matter what happened I was about to witness history.</p>
 
             <div class="photo-row">
@@ -270,7 +272,6 @@
             </div>
 
             <p>My mind was a complete mess between positive and negative, rational and irrational thoughts. McDavid + MacKinnon + Makar in 3-on-3 overtime? We’re completely screwed. They can’t stay on the ice for the entire overtime though, can they? Plus each of their guys is going to try to be the hero individually. Canada isn’t that deep, they’re only going to trust two lines in this thing. USA is going to roll deeper than that. Please, just survive and hope for lucky bounce.</p>
-
             <p>Then it all happened, and fast. We rolled into our third line, Larkin’s turn, and of course you know who was back out there for Canada. McDavid was flying through the neutral zone and came down with a one-on-one chance, getting wide around our guy but without a lot of real estate to work with. Again, Helle stood strong in net and I noticed him sweep the puck back behind the net out of danger and in stride for our skaters to keep moving with speed. Hughes to Werenski to no one in a horrifying 50/50 moment, but we’re out of the zone and on the move. When Werenski found him open in front and Jack Hughes buried the Golden Goal, it was complete bedlam. It was the best celebratory moment in sports that I’ve ever seen, or could ever imagine seeing.</p>
 
             <div class="photo-box">
@@ -279,7 +280,6 @@
             </div>
 
             <p>When the pandemonium died down for a second, I struggled to process what I had just seen. USA beating Canada in overtime for Olympic Gold, for a second time in a week - it still sounds insane, even knowing exactly what happened. I thought about all four players on the ice being from Michigan - Hellebuyck, Hughes, Larkin, Werekenski - and how great that is for our game and our home state. Dad would’ve loved that too.</p>
-
             <p>I ran down to the front row as the celebration erupted and attempted to throw my flag onto the ice to be used in the celebration. It got snagged on the glass, nudged by a photographer, and hung there as a backdrop for the chaos. After the anthem played, the weight of it finally hit me. I stood there crying, kissing my dad’s pins on my USA jersey. It was, without question, the greatest sports moment of my life.</p>
 
             <div class="photo-box">
@@ -293,7 +293,6 @@
             </div>
 
             <p>I eventually found Davidson - I always go "dark" and put my phone away for big games like that - and we were both in a total state of shock. We ran into the Larkins again, and I’ll never forget Dylan’s dad, Kevin, screaming, "Let’s go, I need a fucking beer!" as they waited for the players to come out to the green room. We took that as our cue. We hopped the shuttle back to the train stop area where there was a bar nearby to start our own celebration. That's where we ran into a guy named Shawn from Colorado and then a country singer from Pittsburgh named Will. Will bought another round of twenty beers, and our group swelled to include a United pilot and his wife. We were now a rag-tag collection of seven fans bonded by the game. We shared some heavy, beautiful moments there; Will and I had both lost our fathers who shared a hockey bond with us, and Shawn was carrying a photo of his niece who had passed, whose favorite player was the golden-goal hero himself, Jack Hughes.</p>
-
             <p>At the same time, both my mom and my dad’s buddy Tony were sending celebratory messages and pictures showing how they were including the memory of my dad in their celebrations back home.</p>
 
             <div class="photo-row">
@@ -302,7 +301,6 @@
             </div>
 
             <p>As the night progressed, I remembered my key intel from Jack at the start of the trip. I told the group I knew where the "Winter House" was, and therefore where the Team USA after-party would be happening. Will didn't hesitate: "You get us there, I'll try to get us in." We navigated the train and then the tram back toward Navigli, and as Will approached the door, the greeter looked at me and asked, "Are you also with Quinn?" I didn't blink: "You bet I am."</p>
-
             <p>Suddenly, we were inside the Team USA gold medal after party. Un-fucking-believable. The first person I saw was Quinn Hughes, then the legend himself, Mike Eruzione. I took a selfie with both of them, as well as Brady Tkachuk and his gold medal. When Colin Larkin spotted me, he just laughed, "How'd this guy get in?" I tried to stay low-key, just soaking it in without being an intruder. I watched the Tkachuks and McAvoy celebrating, saw a very shy Auston Matthews, and a very tall Tage Thompson. I even chatted with Jack Hughes for a second—when I mentioned his video guy back in Jersey was my old roommate, he was incredibly cool, asking if I was a "UMich guy." I was struck by how young most of the team looked (especially Brock Faber) in person and in that setting, but it was also incredible to watch them have the time of their lives.</p>
 
             <div class="photo-row">
