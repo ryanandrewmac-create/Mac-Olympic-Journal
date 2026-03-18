@@ -31,7 +31,7 @@
         }
         .container {
             max-width: 850px;
-            margin: -2rem auto 5rem;
+            margin: -1.5rem auto 5rem;
             padding: 3rem 4rem 4rem 4rem;
             background: white;
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
@@ -63,7 +63,6 @@
         }
         p { margin-bottom: 2rem; font-size: 1.15rem; text-align: left; }
         
-        /* GENERAL PHOTO BOX (STACKED, FULL-WIDTH) */
         .photo-box {
             margin: 3rem -4rem;
             text-align: center;
@@ -78,7 +77,6 @@
             border: 4px solid white;
         }
         
-        /* PHOTO ROW (STANDARD SIDE-BY-SIDE) */
         .photo-row {
             display: flex;
             gap: 15px;
@@ -95,10 +93,9 @@
             object-fit: cover;
         }
         
-        /* SPECIAL ROW (2/3 & 1/3 split) */
         .photo-row-offset {
             display: grid;
-            grid-template-columns: 2fr 1fr; /* The 2/3 and 1/3 split */
+            grid-template-columns: 2fr 1fr;
             gap: 15px;
             margin: 3rem -4rem;
             background: #111;
@@ -106,9 +103,9 @@
         }
         .photo-row-offset img {
             width: 100%;
-            height: 100%; /* Important to match the height of the row */
+            height: 100%;
             border: 3px solid white;
-            object-fit: cover; /* Crops the image subtly to fit the area */
+            object-fit: cover;
         }
         .photo-row-offset .item { text-align: center; }
 
@@ -142,7 +139,7 @@
         @media (max-width: 768px) {
             .container { padding: 2rem 1.5rem; width: 95%; margin: -1rem auto 2rem; box-sizing: border-box; }
             .photo-row { flex-direction: column; margin: 2rem -1.5rem; }
-            .photo-row-offset { grid-template-columns: 1fr; margin: 2rem -1.5rem; } /* Stack on mobile */
+            .photo-row-offset { grid-template-columns: 1fr; margin: 2rem -1.5rem; }
             .photo-box { margin: 2rem -1.5rem; }
             h1 { font-size: 1.8rem; }
         }
@@ -159,7 +156,7 @@
         <div class="date-section">
             <span class="date-badge">Tuesday, Feb 17, 2026</span>
             <h2>Men’s Qualification</h2>
-            <p>Upon first arriving in Italy I met up with fellow solo traveler, Connor Mohr, to get the lay of the land and make plans to watch some hockey together. We ended up first attending the men’s qualification round between Sweden and Latvia on Tuesday night to scout out the competition Team USA was to face the following night and also get my first live glimpse of Olympic hockey. I was in awe from the start. We were able to squeeze in a late nightcap after the game meeting up with fellow Chicago hockey player and neighbor Jack Seney along with his fiance. Over a drink, they told me the location of the USA “Winter House”, which was a swanky hotel and bar that became the hospitality headquarters for Team USA in Milan. I promptly saved the location to my Google Maps and forgot all about it, not knowing it would become key intel later on in my trip.</p>
+            <p>Upon first arriving in Italy I met up with fellow solo traveler, Connor Mohr, to get the lay of the land and make plans to watch some hockey together. We ended up first attending the men’s qualification round between Sweden and Latvia on Tuesday night to scout out the competition Team USA was to face the following night and also get my first live glimpse of Olympic hockey. I was in awe from the start. We were able to squeeze in a late nightcap after the game meeting up with fellow Chicago hockey player and neighbor Jack Seney along with his fiance, Annie. Over a drink, they told me the location of the USA “Winter House”, which was a swanky hotel and bar that became the hospitality headquarters for Team USA in Milan. I promptly saved the location to my Google Maps and forgot all about it, not knowing it would become key intel later on in my trip.</p>
             
             <div class="photo-row-offset">
                 <div class="item">
@@ -168,7 +165,7 @@
                 </div>
                 <div class="item">
                     <img src="selfie-jack-meetup.jpg" alt="Nightcap with Jack">
-                    <span class="caption">Nightcap with Jack Seney.</span>
+                    <span class="caption">Nightcap with Jack.</span>
                 </div>
             </div>
         </div>
