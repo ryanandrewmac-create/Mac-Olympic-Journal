@@ -54,9 +54,9 @@
             display: inline-block;
             background: var(--usa-red);
             color: white;
-            padding: 4px 15px;
+            padding: 2px 12px;
             font-family: sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             font-weight: bold;
             letter-spacing: 1px;
@@ -69,9 +69,11 @@
             border-bottom: 1px solid #eee;
             padding-bottom: 1rem;
         }
-        p { margin-bottom: 2rem; font-size: 1.25rem; text-align: left; }
+        p { margin-bottom: 2rem; font-size: 1.2rem; text-align: left; }
+        
+        /* PHOTO STYLING */
         .photo-box {
-            margin: 4rem -4rem;
+            margin: 3rem -4rem;
             text-align: center;
             background: #111;
             padding: 20px 0;
@@ -81,16 +83,35 @@
             height: auto;
             display: block;
             margin: 0 auto;
-            border: 5px solid white;
+            border: 4px solid white;
         }
+        
+        /* SIDE-BY-SIDE GRID */
+        .photo-row {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 3rem -4rem;
+            background: #111;
+            padding: 20px;
+        }
+        .photo-row .item { flex: 1; text-align: center; }
+        .photo-row img {
+            width: 100%;
+            height: auto;
+            border: 3px solid white;
+            object-fit: cover;
+        }
+
         .caption {
             display: block;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #aaa;
-            padding: 15px 40px;
+            padding: 10px 20px;
             font-style: italic;
             font-family: sans-serif;
         }
+        
         .dedication {
             margin-top: 8rem;
             padding-top: 3rem;
@@ -100,12 +121,21 @@
             font-size: 1.4rem;
             color: var(--usa-blue);
         }
+        
         footer {
             text-align: center;
-            padding: 6rem 1rem;
+            padding: 4rem 1rem;
             background: var(--usa-blue);
             color: white;
             font-family: sans-serif;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem; margin: 0 auto; width: 90%; }
+            .photo-row { flex-direction: column; margin: 2rem 0; }
+            .photo-box { margin: 2rem 0; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -121,140 +151,111 @@
 
     <article>
         <div class="date-section">
-            <span class="date-badge">Tuesday, February 17, 2026</span>
+            <span class="date-badge">Tuesday, Feb 17, 2026</span>
             <h2>Men’s Qualification</h2>
             <p>Upon first arriving in Italy I met up with fellow solo traveler, Connor Mohr, to get the lay of the land and make plans to watch some hockey together. We ended up first attending the men’s qualification round between Sweden and Latvia on Tuesday night to scout out the competition Team USA was to face the following night and also get my first live glimpse of Olympic hockey. I was in awe from the start.</p>
             
             <div class="photo-box">
                 <img src="qualification.jpg" alt="Men's Qualification Game">
-                <span class="caption">Sweden vs. Latvia. My first live look at Olympic hockey.</span>
+                <span class="caption">Scouting the competition: Sweden vs. Latvia.</span>
             </div>
 
             <p>We were able to squeeze in a late nightcap after the game meeting up with fellow Chicago hockey player and neighbor Jack Seney along with his fiance. Over a drink, they told me the location of the USA “Winter House”, which was a swanky hotel and bar that became the hospitality headquarters for Team USA in Milan. I promptly saved the location to my Google Maps and forgot all about it, not knowing it would become key intel later on in my trip.</p>
 
-            <div class="photo-box">
+            <div class="photo-box" style="max-width: 500px; margin-left: auto; margin-right: auto;">
                 <img src="selfie-jack-meetup.jpg" alt="Meetup with Jack Seney">
-                <span class="caption">Nightcap with Jack. Saving the Winter House coordinates.</span>
+                <span class="caption">Vertical: Nightcap with Jack.</span>
             </div>
         </div>
 
         <div class="date-section">
-            <span class="date-badge">Wednesday, February 18, 2026</span>
+            <span class="date-badge">Wednesday, Feb 18, 2026</span>
             <h2>Men’s Quarterfinal</h2>
+            
+            <div class="photo-row">
+                <div class="item">
+                    <img src="sweden-game.jpg" alt="USA vs Sweden">
+                    <span class="caption">Vertical: USA vs. Sweden.</span>
+                </div>
+                <div class="item">
+                    <img src="corona-cups.jpg" alt="Olympic Corona Cups">
+                    <span class="caption">Vertical: The summery Corona cups.</span>
+                </div>
+            </div>
+
             <p>Connor and I had seats together for the 9:15pm quarterfinal matchup of USA vs. Sweden. Watching Team USA come onto the ice in glorious blue against Sweden’s iconic Tre Kroner yellow jersey, I couldn’t help but think of Herb Brooks (ok, Kurt Russell) angrily yelling “you’re playing SWEDEN…IN THE OLYMPICS!” in Miracle. This was my first ever glimpse of the USA hockey team live in person - something I have quite literally been dreaming about for as long as I can remember. I was beyond pumped up.</p>
 
-            <div class="photo-box">
-                <img src="sweden-game.jpg" alt="USA vs Sweden Quarterfinal">
-                <span class="caption">USA in the blue. A dream come true.</span>
+            <p>After a scoreless first period, we took to the concourse. Shockingly, the only beer served at the Olympic events was the summery (and overrated) Corona, but at least they came in cool cups. Naturally, I was wearing my favorite hometown player’s jersey in Milan. A Michigan Wolverine who went on to become captain of the Detroit Red Wings and key player & leader for Team USA, Dylan Larkin. As we got through the beer line after that first intermission, Connor pointed out a big group of people also wearing #21 jerseys and so I absolutely had to go say hello and introduce myself.</p>
+
+            <div class="photo-row">
+                <div class="item">
+                    <img src="larkins-1.jpg" alt="Meeting the Larkin Family">
+                    <span class="caption">The Larkin Family crew.</span>
+                </div>
+                <div class="item">
+                    <img src="larkins-2.jpg" alt="Larkin Group Shot">
+                    <span class="caption">Rolling with the "Keller Group."</span>
+                </div>
             </div>
 
-            <p>After a scoreless first period, we took to the concourse. Shockingly, the only beer served at the Olympic events was the summery (and overrated) Corona, but at least they came in cool cups.</p>
-
-            <div class="photo-box">
-                <img src="corona-cups.jpg" alt="Olympic Corona Cups">
-                <span class="caption">The beer choice was questionable, the cups were cool.</span>
-            </div>
-
-            <p>Naturally, I was wearing my favorite hometown player’s jersey in Milan. A Michigan Wolverine who went on to become captain of the Detroit Red Wings and key player & leader for Team USA, Dylan Larkin. As we got through the beer line after that first intermission, Connor pointed out a big group of people also wearing #21 jerseys and so I absolutely had to go say hello and introduce myself. It turned out to be Kevin Larkin (his dad), Colin Larkin (his brother), and a whole crew of family and friends that had traveled to Milan. We had some fun chatting and they couldn’t have been nicer people who I would end up seeing at nearly every intermission of each USA men’s game through the rest of the tournament.</p>
-
-            <div class="photo-box">
-                <img src="larkins-1.jpg" alt="Meeting the Larkin Family">
-                <span class="caption">With the Larkin crew. Keeping it 21.</span>
-            </div>
-
-            <p>I’m sure they were meeting a ton of people, but I think Kevin’s dad thought I was somehow connected to the Clayton Keller group. At first I tried to explain that I’m just a fan, but eventually I thought it best to just roll with it, an attitude that would continue to pay dividends for me on this trip.</p>
-
-            <div class="photo-box">
-                <img src="larkins-2.jpg" alt="Larkin Group Shot">
-                <span class="caption">Rolling with the "Keller Group" vibes.</span>
-            </div>
-
-            <p>Guess who scored the first goal of the game? It had to be Dylan Larkin. In fact, as the teams got set for that offensive zone draw in the second period I actually turned to Connor and said “Larkin faceoff win leads to a goal, right here” and wouldn’t you believe that’s exactly how it turned out. Sure, you could say I make a lot of predictions and even a blind squirrel finds a nut, but that wasn’t the case in the stadium that night. Connor will vouch for me on this one.</p>
-
-            <p>We got to experience our first really nervous moments when Sweden tied the game up late in the third period with their tendy pulled to send it to overtime. Epic from a pure hockey standpoint, but horrifying for a die-hard USA fan whose tournament was just getting started. I was certainly nervous getting my first taste of 3-on-3 Olympic overtime. I honestly don’t believe I had ever witnessed an OT game winner in a win-or-go-home hockey situation. Sure, the opportunity doesn’t come around every day but when you consider that I’ve probably attended at least 5 of these situations between following Michigan hockey in the tournament and a Red Wings game 7 playoff OT loss, I wouldn’t blame you for believing I’m cursed as some of my buddies do. Not in this game, not tonight. Thankfully, the boys got it done and another former Wolverine, Quinn Hughes, buried the game winner. Luck or destiny may have been turning our way, and I allowed myself to dream about the games ahead.</p>
+            <p>It turned out to be Kevin Larkin (his dad), Colin Larkin (his brother), and a whole crew of family and friends that had traveled to Milan. We had some fun chatting and they couldn’t have been nicer people who I would end up seeing at nearly every intermission of each USA men’s game through the rest of the tournament. I’m sure they were meeting a ton of people, but I think Kevin’s dad thought I was somehow connected to the Clayton Keller group. At first I tried to explain that I’m just a fan, but eventually I thought it best to just roll with it, an attitude that would continue to pay dividends for me on this trip.</p>
+            <p>Guess who scored the first goal of the game? It had to be Dylan Larkin. Thankfully, the boys got it done and another former Wolverine, Quinn Hughes, buried the game winner. Luck or destiny may have been turning our way, and I allowed myself to dream about the games ahead.</p>
         </div>
 
         <div class="date-section">
-            <span class="date-badge">Thursday, February 19, 2026</span>
+            <span class="date-badge">Thursday, Feb 19, 2026</span>
             <h2>Women’s Gold Medal</h2>
             
             <div class="photo-box">
                 <img src="women-warmups.jpg" alt="Women's Team Warmups">
-                <span class="caption">Women's warmups in Milan. The quest for Gold begins.</span>
+                <span class="caption">The quest for Gold begins.</span>
             </div>
 
-            <p>After having sweated out the late overtime win by the men the prior night, I took my time getting up and moving. This was the day of the women’s gold medal game, and as expected the matchup was USA against Canada. These were the first tickets my dad and I had purchased more than a year prior to the event. I was quite excited to go, and happy to have a fellow fan to use my dad’s ticket in Connor. We decided to meet up for pregame beers around 1pm, and landed on the canal district, or Navigli, as a good spot. As we walked along the canal it was striking how many more Canadian fans were out and about than Americans. The first beer-focused place we could find open was the Navigli Craft Beer bar, which turned out to be a great spot to start. After a few beers and friendly chatter with some fellow Americans, we moved to the next location. Connor knew the bar the Canadians had taken over - the Blues Canal - and we decided to pop in for a little fun. It was pretty quiet. Most of the beer taps had run dry from the night before so the restock was in full gear, but we managed to get a liter of the Moretti each and posted up by the bar. We heard a couple playful comments, but no strong chirps. A reporter approached us asking about our audacity to show up the Canadian bar decked out in full USA gear, and we had a quick recorded conversation and took a photo. She turned out to be Robyn Doolittle of the Globe & Mail who had broken open some of the news of the late Rob Ford’s personal scandals as mayor in Toronto. We told her we were confident and we even thought the Canadian fans were nervous since the USA women had been so dominant. We were ready to go. We followed beers up by tucking into a small empty restaurant where we shared some pasta, then made our way to the game.</p>
+            <p>After having sweated out the late overtime win by the men the prior night, I took my time getting up and moving. This was the day of the women’s gold medal game, and as expected the matchup was USA against Canada. These were the first tickets my dad and I had purchased more than a year prior to the event. I was quite excited to go, and happy to have a fellow fan to use my dad’s ticket in Connor. We decided to meet up for pregame beers around 1pm, and landed on the canal district, or Navigli, as a good spot.</p>
 
             <div class="photo-box">
                 <img src="women-puck-drop.jpg" alt="Puck Drop Women's Final">
                 <span class="caption">Moments before puck drop. The energy was massive.</span>
             </div>
 
-            <p>The game was intense. Canada took the lead with a strong individual effort on a short-handed goal and backed it up with incredible defending making USA look like a shell of its usual self. It got really nerve wracking as the clock wound down in the third period, until the most decorated woman in USA hockey history, Hilary Knight, tipped in a shot in front of the net with the goalie pulled to tie the game in the dying minutes. On to OT. But, both teams did look nervous out of the gate for 3-on-3 overtime with mishandled and sloppy play all around. Finally a break with a long outlet pass during a bad change and American hero Megan Keller, of Green Valley Estates in Farmington Hills, MI, pulled off the “Star-Spangled Dangle” golden goal to bring home a gold medal in epic fashion. Connor and I were in disbelief at what we just saw and the fact that our hometown hero had pulled that off. Unreal. We watched the anthems and celebrations until the very last player left the ice and were so happy and thankful to be able to witness that moment.</p>
+            <p>Finally a break with a long outlet pass during a bad change and American hero Megan Keller, of Green Valley Estates in Farmington Hills, MI, pulled off the “Star-Spangled Dangle” golden goal to bring home a gold medal in epic fashion. Connor and I were in disbelief at what we just saw and the fact that our hometown hero had pulled that off. Unreal. We watched the anthems and celebrations until the very last player left the ice and were so happy and thankful to be able to witness that moment.</p>
 
-            <div class="photo-box">
-                <img src="ryan-connor-gold.jpg" alt="Ryan and Connor Celebrate">
-                <span class="caption">Pure disbelief. Gold medal winners.</span>
-            </div>
-
-            <div class="photo-box">
-                <img src="women-medals.jpg" alt="Women Receive Medals">
-                <span class="caption">The medal ceremony.</span>
+            <div class="photo-row">
+                <div class="item"><img src="ryan-connor-gold.jpg" alt="Celebrate"><span class="caption">Pure disbelief.</span></div>
+                <div class="item"><img src="women-medals.jpg" alt="Medals"><span class="caption">The ceremony.</span></div>
             </div>
 
             <div class="photo-box">
                 <img src="women-team-pic.jpg" alt="Women's Team Picture">
                 <span class="caption">Team USA: 2026 Olympic Champions.</span>
             </div>
-
-            <div class="photo-box">
-                <img src="women-flags.jpg" alt="Women's Celebration with Flags">
-                <span class="caption">The lap of honor.</span>
-            </div>
-
-            <p>Leaving the rink late, I convince Connor to go for post game beers…even though it is in the other direction for him, we just saw a freaking gold medal. We head to a new spot, Il Beerla. Immediately upon walking in I’m hugged by a young guy who “misses Americans”. He turns out to be a rich kid of Russian heritage from Maine who is both studying abroad and working as a jeweler in Milan. We met the owner of the bar, of course put up Mac Brewing stickers, and had a fun night.</p>
         </div>
 
         <div class="date-section">
-            <span class="date-badge">Friday, February 20, 2026</span>
+            <span class="date-badge">Friday, Feb 20, 2026</span>
             <h2>Men’s Semifinal</h2>
-            <p>On the morning of the semifinals, I found a quiet moment to myself, sitting under the ancient pillars of the Porta Ticinese Medievale with a coffee in hand. As I was watching the city wake up, a flash of red, white, and blue caught my eye, a USA jersey. I struck up a conversation with the guy wearing it, a fellow named Davidson. It turned out he was living in California but was originally from Michigan, so we hit it off immediately over the hometown connection. I invited him to join our crew for the day, and once I linked back up with Connor, the three of us set out on a mission for a proper lunch. We ended up finding a spot that served arguably the best Cacio e Pepe in all of Milan. We spent the afternoon lingering over incredible pasta and wine, the kind of meal that makes you forget you have somewhere to be, until the pre-game energy finally pulled us toward the rink.</p>
-
-            <p>We took the train out toward the rink and decided to squeeze in some pregame beers near the shuttle pickup point. That’s where we ran into a group of Swedes on a weekend trip, led by a guy named Viktor. They were a riot - exactly the kind of fun, boisterous group you want to grab a drink with before a big game. After a few rounds and plenty of laughs with them, we headed into the arena for the doubleheader.</p>
+            <p>On the morning of the semifinals, I found a quiet moment to myself, sitting under the ancient pillars of the Porta Ticinese Medievale with a coffee in hand. We ended up finding a spot that served arguably the best Cacio e Pepe in all of Milan. We spent the afternoon lingering over incredible pasta and wine before heading to the rink.</p>
 
             <div class="photo-box">
                 <img src="swedes-pic.jpg" alt="With the Swedes">
                 <span class="caption">Pregame with Viktor and the Swedes.</span>
             </div>
 
-            <p>The first matchup was Canada against Finland; for a while, the Finns played with enough heart to make us think an upset was brewing, but the Canadians eventually proved to be too deep and disciplined. Fortunately, the main event was much easier on my heart than the women’s final had been. Team USA completely overmatched Slovakia, putting on a dominant performance that gave us a rare, stress-free win to punch our ticket forward.</p>
+            <p>As the clock was winding down in the semifinal, I had already decided I was going to attend the gold medal game no matter how expensive it was going to be. Thankfully, I had some intel on a resale app. I found a “partially obstructed” lower bowl seat, which as it turns out, was directly next to the USA women’s team still celebrating their own Gold.</p>
 
-            <p>As the clock was winding down in the semifinal, I had already decided I was going to attend the gold medal game no matter how expensive it was going to be. Thankfully, I had some intel - shoutout to John back home for sending me a link, even if I didn’t trust it at the time - on a resale app that actually resulted in the tickets actually being transferred to the Olympic app after having seen Davidson successfully use it at the bar earlier in the day. I found a “partially obstructed” lower bowl seat, which I had to check out for myself.</p>
-
-            <div class="photo-box">
-                <img src="women-team-stands.jpg" alt="Women's Team in the Stands">
-                <span class="caption">The Women's Team hanging out in the stands.</span>
+            <div class="photo-row">
+                <div class="item"><img src="women-team-stands.jpg" alt="Women in Stands"><span class="caption">Champions in the seats.</span></div>
+                <div class="item"><img src="women-team-kelce.jpg" alt="Jason Kelce"><span class="caption">With superfan Jason Kelce.</span></div>
             </div>
-
-            <p>As it turns out, it was only a couple sections over from where I sat and directly next to the USA women’s team who were having fun watching the men and still celebrating their own Gold. I watched them take a group picture with their superfan Jason Kelce, then gave captain Hilary Knight a congratulatory fist bump and “hell yeah!” as I walked by. The seat wasn’t going to be obstructed at all, it would be perfect. With that the semis were wrapped up and I was all set for Sunday so it was time to go.</p>
-
-            <div class="photo-box">
-                <img src="women-team-kelce.jpg" alt="Women's Team with Jason Kelce">
-                <span class="caption">Superfan Jason Kelce with the Gold Medalists.</span>
-            </div>
-
-            <p>By the time we got back to the city, the group splintered off. Connor and Davidson headed their separate ways, but I wasn’t quite ready to call it a night, so I ducked into a spot near my Airbnb for a nightcap - the Tutti Fritti. To my total surprise, standing right there outside the beer window was the same group of Swedes, with Viktor leading the charge. We picked up right where we left off, closing down the bar together. Just as the lights were coming up, we met two young guys from Poland and a local Italian girl, and the whole mismatched group migrated to yet another bar. I eventually had to call it a night before I let them talk me into hitting a club, finally heading home in the early hours.</p>
 
             <div class="photo-box">
                 <img src="swede-poles.jpg" alt="Swedes and Poles Party">
-                <span class="caption">The Swedes and our new Polish friends at Tutti Fritti.</span>
+                <span class="caption">Closing down the Tutti Fritti.</span>
             </div>
-
-            <p>The universe clearly wasn't done with that connection, though; in a bizarre twist of fate, I ran into Viktor and the Swedes one last time the Monday after the Olympics ended. We crossed paths at a random spot in the city as they were dragging their bags toward the train station to start their trek home. We said our final goodbyes, wondering if our paths would ever cross at a rink in the future. And as if the trip couldn't get more "hockey," mere moments after leaving the Swedes, I spotted Mike Eruzione just casually strolling through town - but more to come on him later!</p>
         </div>
 
         <div class="date-section">
-            <span class="date-badge">Sunday, February 22, 2026</span>
+            <span class="date-badge">Sunday, Feb 22, 2026</span>
             <h2>Men’s Gold Medal</h2>
 
             <div class="photo-box">
@@ -262,14 +263,12 @@
                 <span class="caption">Men's warmups. The stage is set.</span>
             </div>
 
-            <p>For the championship game, the pregame ritual shifted. Connor had already headed home, so Davidson and I took the train out toward the rink, settling in for some high-stakes beers at the shuttle point. We were hours early, but the nerves were already red-lining. Inside the concourse, I spotted Dylan Larkin’s family again; at every intermission, I made a point to find his brother Colin for a quick fist-bump for good luck. </p>
+            <p>To be honest, the game itself is a blur of adrenaline and anxiety. I had an incredible lower-bowl seat, but I was a nervous wreck, watching Hellebuyck put on a literal masterclass in goaltending. When the game went to overtime, I couldn't sit still. I was pacing the concourse, unable to look but unable to turn away. Then it happened: McDavid had a point-blank one-on-one chance that got shut down, the play transitioned the other way, and the rest is hockey history. Bedlam.</p>
 
-            <div class="photo-box">
-                <img src="men-puck-drop.jpg" alt="Men's Puck Drop">
-                <span class="caption">Puck drop. USA vs Canada.</span>
+            <div class="photo-row">
+                <div class="item"><img src="men-puck-drop.jpg" alt="Puck Drop"><span class="caption">History begins.</span></div>
+                <div class="item"><img src="men-ot-start.jpg" alt="OT Start"><span class="caption">Pacing the halls.</span></div>
             </div>
-
-            <p>To be honest, the game itself is a blur of adrenaline and anxiety. I had an incredible lower-bowl seat, but I was a nervous wreck, watching Hellebuyck put on a literal masterclass in goaltending. When the game went to overtime, I couldn't sit still. I was pacing the concourse, unable to look but unable to turn away. Then it happened: McDavid had a point-blank one-on-one chance that got shut down, the play transitioned the other way, and the rest is hockey history. Bedlam. I couldn't process the fact that the USA men had actually done it - overtime gold against Canada. I sprinted to the front row as the celebration erupted, throwing my flag toward the ice. It got snagged on the glass, hanging there as this perfect backdrop for the chaos.</p>
 
             <div class="photo-box">
                 <img src="men-flag-glass.jpg" alt="Flag on the glass">
@@ -279,74 +278,60 @@
             <p>After the anthem played, the weight of it finally hit me. I stood there crying, kissing my dad’s pins on my USA jersey. It was, without question, the greatest sports moment of my life.</p>
 
             <div class="photo-box">
-                <img src="ryan-men-gold.jpg" alt="Ryan celebrates men's gold">
-                <span class="caption">Holding the flag, kissing the pins. For my dad.</span>
+                <img src="ryan-men-gold.jpg" alt="Ryan celebrates">
+                <span class="caption">For my dad.</span>
             </div>
 
-            <div class="photo-box">
-                <img src="men-medal-ceremony.jpg" alt="Men medal ceremony">
-                <span class="caption">Gold for the USA.</span>
-            </div>
-
-            <div class="photo-box">
-                <img src="men-team-pic.jpg" alt="Men's team pic">
-                <span class="caption">Team USA: 2026 Olympic Champions.</span>
-            </div>
-
-            <p>I eventually found Davidson - I always go "dark" and put my phone away for big games like that - and we were both in a total state of shock. We ran into the Larkins again, and I’ll never forget Dylan’s dad, Kevin, screaming, "Let’s go, I need a fucking beer!" as they waited for the players to come out to the green room. We took that as our cue. We hopped the shuttle back to the train stop area where there was a bar nearby to start our own celebration. That's where we ran into a guy named Shawn from Colorado and then a country singer from Pittsburgh named Will. Will bought a round of twenty beers, and our group swelled to include a United pilot and his wife. We were now a rag-tag collection of seven fans bonded by the game. We shared some heavy, beautiful moments there; Will and I had both lost our fathers who shared this hockey bond with us, and Shawn was carrying a photo of his niece who had passed, whose favorite player was the golden-goal hero himself, Jack Hughes.</p>
-
-            <div class="photo-box">
-                <img src="lost-ones.jpg" alt="Celebrating with those lost">
-                <span class="caption">Raising a glass for the ones who were there in spirit.</span>
+            <div class="photo-row">
+                <div class="item"><img src="men-medal-ceremony.jpg" alt="Ceremony"><span class="caption">Gold for USA.</span></div>
+                <div class="item"><img src="men-team-pic.jpg" alt="Team"><span class="caption">Champions.</span></div>
             </div>
 
             <p>At the same time, both my mom and my dad’s buddy Tony were sending celebratory messages and pictures showing how they were including the memory of my dad in their celebrations back home.</p>
 
-            <div class="photo-box">
-                <img src="home-1.jpg" alt="Celebrations back home 1">
-                <img src="home-2.jpg" alt="Celebrations back home 2">
-                <span class="caption">Celebrating back home. Dad was there with us.</span>
+            <div class="photo-row">
+                <div class="item"><img src="home-1.jpg" alt="Home 1"><span class="caption">Celebrations back home.</span></div>
+                <div class="item"><img src="home-2.jpg" alt="Home 2"><span class="caption">Dad was there with us.</span></div>
             </div>
 
-            <p>As the night progressed, I remembered my key intel from Jack at the start of the trip. I told the group I knew where the "Winter House" was, and therefore where the Team USA after-party would be happening. Will didn't hesitate: "You get us there, I'll try to get us in." We navigated the train and then the tram back toward Navigli, and as Will approached the door, the greeter looked at me and asked, "Are you also with Quinn?" I didn't blink: "You bet I am."</p>
+            <p>Suddenly, we were inside the freaking team USA gold medal after party. The first person I saw was Quinn Hughes, then the legend himself, Mike Eruzione.</p>
 
-            <p>Suddenly, we were inside the freaking team USA gold medal after party. The first person I saw was Quinn Hughes, then the legend himself, Mike Eruzione. I took a selfie with both of them, as well as Brady Tkachuk and his gold medal. </p>
-
-            <div class="photo-box">
-                <img src="selfie-quinn.jpg" alt="Selfie with Quinn">
-                <span class="caption">Hanging with Quinn Hughes.</span>
+            <div class="photo-row">
+                <div class="item">
+                    <img src="selfie-quinn.jpg" alt="Quinn">
+                    <span class="caption">Vertical: Quinn Hughes.</span>
+                </div>
+                <div class="item">
+                    <img src="selfie-eruzione.jpg" alt="Eruzione">
+                    <span class="caption">Vertical: The Captain.</span>
+                </div>
             </div>
 
-            <div class="photo-box">
-                <img src="selfie-eruzione.jpg" alt="Selfie with Eruzione">
-                <span class="caption">The Captain. Mike Eruzione.</span>
+            <div class="photo-row">
+                <div class="item">
+                    <img src="selfie-tkachuk.jpg" alt="Tkachuk">
+                    <span class="caption">Brady Tkachuk.</span>
+                </div>
+                <div class="item">
+                    <img src="colin-jack.jpg" alt="Colin and Jack">
+                    <span class="caption">Vertical: Colin and Jack.</span>
+                </div>
             </div>
 
-            <div class="photo-box">
-                <img src="selfie-tkachuk.jpg" alt="Selfie with Tkachuk">
-                <span class="caption">Brady Tkachuk: Gold Medalist.</span>
+            <div class="photo-row">
+                <div class="item">
+                    <img src="tkachuks.jpg" alt="The Tkachuks">
+                    <span class="caption">Vertical: The Tkachuk family.</span>
+                </div>
+                <div class="item">
+                    <img src="eichel-mcavoy.jpg" alt="Eichel and McAvoy">
+                    <span class="caption">Vertical: McAvoy and Eichel.</span>
+                </div>
             </div>
 
-            <p>When Colin Larkin spotted me, he just laughed, "How'd this guy get in?" I tried to stay low-key, just soaking it in without being an intruder. I watched the Tkachuks and McAvoy celebrating, saw a very shy Auston Matthews, and a very tall Tage Thompson. I even chatted with Jack Hughes for a second—when I mentioned his video guy back in Jersey was my old roommate, he was incredibly cool, asking if I was a "UMich guy." I was struck by how young most of the team looked (especially Brock Faber) in person and in that setting, but it was also incredible to watch them have the time of their lives.</p>
-
-            <div class="photo-box">
-                <img src="colin-jack.jpg" alt="Colin and Jack">
-                <span class="caption">Colin Larkin and Jack Hughes in the mix.</span>
-            </div>
-
-            <div class="photo-box">
-                <img src="tkachuks.jpg" alt="The Tkachuks">
-                <span class="caption">The Tkachuk family after-party.</span>
-            </div>
-
-            <div class="photo-box">
-                <img src="eichel-mcavoy.jpg" alt="Eichel and McAvoy">
-                <span class="caption">McAvoy and Eichel celebrating.</span>
-            </div>
-
-            <p>I spent the rest of the night nursing Michelobs and sparkling waters by the bar, taking it all in and watching the surreal scenes unfold around me - like Eichel and McAvoy accidentally falling into me during a loving bro moment as I was taking a selfie. Even when the pilot from our group almost got us all tossed for being a bit too bold - patting a USA exec on the head as he walked by, I guess he’s a bit touchy feely when drunk! - I just drifted to the other side of the room and kept taking it all in. It was the perfect, unbelievable capstone to the trip. </p>
-
-            <p class="dedication">I know my dad would’ve been loving it all.</p>
+            <p>It was the perfect, unbelievable capstone to the trip. I know my dad would’ve been loving it all.</p>
+            
+            <p class="dedication">In memory of Dad.</p>
         </div>
     </article>
 </div>
