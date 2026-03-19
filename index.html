@@ -119,36 +119,39 @@
     }
 
     /* --- THE UNMATCHED ROW FIX --- */
-    /* This forces the row items to match the height of the tallest content */
     .unmatched-height-row {
-        display: flex;
+        display: grid !important; /* Force a Grid instead of Flex */
+        grid-template-columns: auto auto; /* Columns follow content size */
         gap: 15px;
         justify-content: center;
-        align-items: stretch !important; 
+        align-items: stretch; /* Force all items in the row to the same height */
     }
     
     .unmatched-height-row .item {
-        flex: 0 1 auto !important; 
-        width: auto !important;
         display: flex;
         flex-direction: column;
+        height: 100%; /* Fill the grid cell */
     }
 
     .unmatched-height-row img {
         border: 3px solid white;
         display: block;
-        max-width: 100%;
     }
 
+    /* Lead image defines the natural height limit */
     .unmatched-height-row img.match-lead {
         height: auto;
         max-height: 400px; 
+        max-width: 100%;
     }
     
+    /* Follower image is forced to fill the container height */
     .unmatched-height-row img.match-follower {
-        height: 100% !important;
-        width: auto !important; 
-        object-fit: cover !important; /* Ensures the vertical image fills the height of the Lead */
+        flex-grow: 1; /* Stretch the image box */
+        height: 0;    /* Technical reset for object-fit */
+        min-height: 100%; 
+        width: auto;
+        object-fit: cover; /* Crop slightly to maintain height without squishing */
     }
     /* ----------------------------- */
 
@@ -186,7 +189,7 @@
         text-align: center;
         width: 100%;
         box-sizing: border-box;
-        margin-top: auto; /* Keeps captions at the bottom of the row */
+        margin-top: auto; /* Pushes caption to the very bottom of the item */
     }
     
     .dedication {
@@ -209,7 +212,8 @@
 
     @media (max-width: 768px) {
         .container { padding: 2rem 1.5rem; width: 95%; margin: -1rem auto 2rem; box-sizing: border-box; }
-        .photo-row, .unmatched-height-row { flex-direction: column; margin: 2rem 0; }
+        .photo-row { flex-direction: column; margin: 2rem 0; }
+        .unmatched-height-row { grid-template-columns: 1fr !important; margin: 2rem 0; }
         .photo-row-offset { grid-template-columns: 1fr; }
         
         .photo-row img, 
