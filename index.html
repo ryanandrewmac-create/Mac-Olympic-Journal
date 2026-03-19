@@ -96,7 +96,7 @@
         display: flex;
         gap: 15px;
         justify-content: center;
-        align-items: center; /* Changed to center to keep uneven images aligned */
+        align-items: center;
     }
 
     .photo-row .item { 
@@ -109,27 +109,37 @@
 
     .photo-row img {
         max-width: 100%;
-        max-height: 450px; /* Ceiling for 50/50 rows */
-        width: auto;       /* Prevents stretching */
-        height: auto;      /* Prevents stretching */
+        max-height: 450px;
+        width: auto;
+        height: auto;
         border: 3px solid white;
-        object-fit: contain; /* Keeps entire image visible proportionally */
+        object-fit: contain;
         display: block;
     }
-    /* Special constraint just for this unmatched height row */
+
+    /* --- THE UNMATCHED ROW FIX --- */
     .unmatched-height-row {
-      align-items: flex-start !important; /* Forces vertical photo to align top */
+        align-items: flex-start !important;
     }
     
+    /* Let the images define the column width instead of forcing 50/50 */
+    .unmatched-height-row .item {
+        flex: none !important;
+        width: auto !important;
+    }
+
     .unmatched-height-row img.match-lead {
-      height: auto; /* Let the horizontal photo find its native height */
+        height: auto;
+        max-height: 400px; /* Ceiling for the wide arena photo */
     }
     
     .unmatched-height-row img.match-follower {
-      /* This is the key: force the vertical photo to match the lead photo's native height */
-      height: 100% !important; 
-      width: auto;             /* Preserve its own width */
+        height: 100% !important;
+        width: auto !important; 
+        object-fit: contain !important;
     }
+    /* ----------------------------- */
+
     /* 2/3 and 1/3 ROW */
     .photo-row-offset {
         display: grid;
@@ -147,9 +157,9 @@
 
     .photo-row-offset img {
         max-width: 100%;
-        max-height: 500px; /* Ceiling for offset rows */
-        width: auto;       /* Prevents stretching */
-        height: auto;      /* Prevents stretching */
+        max-height: 500px;
+        width: auto;
+        height: auto;
         border: 3px solid white;
         object-fit: contain; 
         display: block;
@@ -191,7 +201,6 @@
         .photo-row { flex-direction: column; margin: 2rem -1.5rem; }
         .photo-row-offset { grid-template-columns: 1fr; margin: 2rem -1.5rem; }
         
-        /* Reset constraints for mobile so images can fill width */
         .photo-row img, 
         .photo-row-offset img { 
             height: auto; 
@@ -199,6 +208,11 @@
             max-height: none;
         } 
         
+        /* Reset the fix for mobile so items stack full width */
+        .unmatched-height-row .item {
+            width: 100% !important;
+        }
+
         .photo-box { margin: 2rem -1.5rem; }
         h1 { font-size: 1.8rem; }
     }
