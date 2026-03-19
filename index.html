@@ -96,7 +96,7 @@
         display: flex;
         gap: 15px;
         justify-content: center;
-        align-items: stretch;
+        align-items: center; /* Changed to center to keep uneven images aligned */
     }
 
     .photo-row .item { 
@@ -108,10 +108,12 @@
     }
 
     .photo-row img {
-        width: 100%;
-        height: 300px; /* MATCHED HEIGHT FOR 50/50 ROWS */
+        max-width: 100%;
+        max-height: 450px; /* Ceiling for 50/50 rows */
+        width: auto;       /* Prevents stretching */
+        height: auto;      /* Prevents stretching */
         border: 3px solid white;
-        object-fit: cover;
+        object-fit: contain; /* Keeps entire image visible proportionally */
         display: block;
     }
     
@@ -120,6 +122,7 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 15px;
+        align-items: center;
     }
 
     .photo-row-offset .item { 
@@ -130,10 +133,12 @@
     }
 
     .photo-row-offset img {
-        width: 100%;
-        height: 350px; /* MATCHED HEIGHT FOR OFFSET ROWS */
+        max-width: 100%;
+        max-height: 500px; /* Ceiling for offset rows */
+        width: auto;       /* Prevents stretching */
+        height: auto;      /* Prevents stretching */
         border: 3px solid white;
-        object-fit: cover; 
+        object-fit: contain; 
         display: block;
     }
 
@@ -173,10 +178,12 @@
         .photo-row { flex-direction: column; margin: 2rem -1.5rem; }
         .photo-row-offset { grid-template-columns: 1fr; margin: 2rem -1.5rem; }
         
-        /* Reset heights on mobile so photos don't look cropped or tiny */
+        /* Reset constraints for mobile so images can fill width */
         .photo-row img, 
         .photo-row-offset img { 
             height: auto; 
+            width: 100%;
+            max-height: none;
         } 
         
         .photo-box { margin: 2rem -1.5rem; }
@@ -359,17 +366,25 @@
             <p>Suddenly, we were inside the Team USA gold medal after party. Un-fucking-believable. The first person I saw was Quinn Hughes, then the legend himself, Mike Eruzione. Are you kidding me? I took a selfie with both of them, as well as Brady Tkachuk and his gold medal. When Colin Larkin spotted me, he just laughed, "How'd this guy get in?" I tried to stay low-key, just soaking it in without intruding on the moment that was most meant for the team and their families. I watched the Tkachuks and McAvoy celebrating, saw a very shy Auston Matthews, and a very tall Tage Thompson. I even chatted with Jack Hughes for a minute since we’ve actually got a mutual connection - when I mentioned his video guy back in Jersey was my old roommate, Greenie, he was incredibly cool and saying “oh you must be a UMich guy." I was struck by how young most of the team looked - especially Brock Faber - in person and in that setting. They were having the time of their lives, and to be honest so was I.</p>
 
             <div class="photo-row">
-                <div class="item"><img src="selfie-quinn.jpg" alt="Quinn Selfie"></div>
-                <span class="caption">With Quinn Hughes.</span>
-                <div class="item"><img src="selfie-eruzione.jpg" alt="Eruzione Selfie"></div>
+                <div class="item">
+                    <img src="selfie-quinn.jpg" alt="Quinn Selfie">
+                    <span class="caption">With Quinn Hughes.</span>
+                </div>
+            <div class="item">
+                <img src="selfie-eruzione.jpg" alt="Eruzione Selfie">
                 <span class="caption">With Mike Eruzione.</span>
             </div>
 
             <div class="photo-row">
-                <div class="item"><img src="selfie-tkachuk.jpg" alt="Tkachuk Selfie"></div>
-                <span class="caption">With Brady Tkachuk.</span>
-                <div class="item"><img src="colin-jack.jpg" alt="Colin and Jack"></div>
-                <span class="caption">Colin Larkin with Jack Hughes and his medal.</span>
+                <div class="item">
+                    <img src="selfie-tkachuk.jpg" alt="Tkachuk Selfie">
+                    <span class="caption">With Brady Tkachuk.</span>
+                </div>
+                
+                <div class="item">
+                    <img src="colin-jack.jpg" alt="Colin and Jack">
+                    <span class="caption">Colin Larkin with Jack Hughes and his medal.</span>
+                </div>
             </div>
 
             <p>I spent the rest of the night nursing Michelobs and sparkling waters by the bar and watching the surreal scenes unfold around me - like Eichel and McAvoy accidentally falling into me during a loving bro moment as I was taking a selfie. Even when the pilot from our group almost got us all tossed for being a bit too bold - patting a USA exec on the head as he walked by, I guess he’s a bit touchy feely when drunk! - I just drifted to the other side of the room and kept taking it all in. As a goalie, I of course would’ve loved to take a picture and give kudos to Hellebuyck for his absolutely heroic performance, but as I hung nearby he was deep in a conversation about the best fishing spots in Southeast Michigan. I chuckled at that, but it was his moment to enjoy however he wanted and I certainly wasn’t going to interrupt that.</p>
