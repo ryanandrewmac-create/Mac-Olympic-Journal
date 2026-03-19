@@ -116,7 +116,20 @@
         object-fit: contain; /* Keeps entire image visible proportionally */
         display: block;
     }
+    /* Special constraint just for this unmatched height row */
+    .unmatched-height-row {
+      align-items: flex-start !important; /* Forces vertical photo to align top */
+    }
     
+    .unmatched-height-row img.match-lead {
+      height: auto; /* Let the horizontal photo find its native height */
+    }
+    
+    .unmatched-height-row img.match-follower {
+      /* This is the key: force the vertical photo to match the lead photo's native height */
+      height: 100% !important; 
+      width: auto;             /* Preserve its own width */
+    }
     /* 2/3 and 1/3 ROW */
     .photo-row-offset {
         display: grid;
