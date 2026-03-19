@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milano 2026 | Olympic Hockey Journal</title>
-    <style>
+<style>
         :root {
             --usa-blue: #002868;
             --usa-red: #bf0a30;
@@ -73,19 +73,11 @@
             color: var(--usa-red);
         }
         
-/* PHOTO CONTAINERS: Shared black background and margins */
-        .photo-box, 
-        .photo-row, 
-        .photo-row-offset {
-            margin: 3rem -4rem;
-            background: #111;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        /* SINGLE PHOTO BOX */
         .photo-box {
+            margin: 3rem -4rem;
             text-align: center;
+            background: #111;
+            padding: 20px 0;
         }
         .photo-box img {
             max-width: 90%;
@@ -94,19 +86,23 @@
             margin: 0 auto;
             border: 4px solid white;
         }
-
-        /* PHOTO ROW (50/50 split) */
+        
         .photo-row {
             display: flex;
             gap: 15px;
             justify-content: center;
+            margin: 3rem -4rem;
+            background: #111;
+            padding: 20px;
         }
-        .photo-row .item { 
-            flex: 1; 
-            text-align: center; 
+        .photo-row .item { flex: 1; text-align: center; }
+        .photo-row img {
+            width: 100%;
+            height: auto;
+            border: 3px solid white;
+            object-fit: cover;
         }
-
-        /* PHOTO ROW OFFSET (2/3 and 1/3 split) */
+        
         .photo-row-offset {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -114,33 +110,15 @@
             margin: 3rem -4rem;
             background: #111;
             padding: 20px;
-            align-items: start; /* Keeps the top of the photos aligned */
         }
-        .photo-row-offset .item { 
-            text-align: center; 
-        }
-
-        /* SHARED IMAGE STYLES FOR ROWS */
-        .photo-row img, 
         .photo-row-offset img {
             width: 100%;
-            height: 350px;    /* Force both to this height */
-            object-fit: cover; /* Crop the edges so they don't stretch */
+            height: 100%;
             border: 3px solid white;
-            display: block;
+            object-fit: cover;
         }
+        .photo-row-offset .item { text-align: center; }
 
-        /* CAPTION STYLE: Centered, grey, and stays on the black background */
-        .caption {
-            display: block;
-            font-size: 0.9rem;
-            color: #aaa;
-            padding: 12px 5px 5px 5px;
-            font-style: italic;
-            font-family: sans-serif;
-            text-align: center;
-            line-height: 1.4;
-        }
         .caption {
             display: block;
             font-size: 0.9rem;
