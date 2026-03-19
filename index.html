@@ -117,42 +117,43 @@
         display: block;
     }
 
-/* --- THE UNMATCHED ROW FIX --- */
+/* --- THE UNMATCHED ROW FIX (66/33 SPLIT) --- */
     .unmatched-height-row {
         display: flex !important;
         gap: 15px;
         justify-content: center;
-        /* Aligns items to the top; height is determined by the natural height of the Lead */
-        align-items: flex-start !important; 
+        align-items: stretch !important; /* Force containers to same height */
     }
     
-    .unmatched-height-row .item {
-        flex: 1; /* Allows both columns to negotiate space equally */
+    .unmatched-height-row .item:first-child {
+        flex: 2; /* Takes up 2/3 (approx 66%) */
         display: flex;
         flex-direction: column;
-        /* This is the key: forces the item to be as tall as the row's tallest point */
-        align-self: stretch; 
+    }
+
+    .unmatched-height-row .item:last-child {
+        flex: 1; /* Takes up 1/3 (approx 33%) */
+        display: flex;
+        flex-direction: column;
     }
 
     .unmatched-height-row img {
         border: 3px solid white;
         display: block;
-        width: 100%; /* Ensures they fill the horizontal space of their 'item' */
+        width: 100%; 
     }
 
     .unmatched-height-row img.match-lead {
         height: auto;
-        max-height: 500px; /* Increased for that 'blown up' look you wanted */
-        object-fit: contain;
+        max-height: 500px; 
+        object-fit: cover; /* Ensures it fills its 66% width properly */
     }
     
     .unmatched-height-row img.match-follower {
-        /* Force this image to take up all available vertical space in the item */
         flex-grow: 1;
-        height: 0; /* Standard CSS trick to let flex-grow take over height calculation */
-        object-fit: cover; /* Crops the vertical photo to match the Lead's height exactly */
+        height: 0; 
+        object-fit: cover; /* Crops to match the lead's height exactly */
     }
-
     /* TARGETED MATCHING FOR ROWS LIKE THE TV SHOTS */
     .photo-row.match-height {
         align-items: stretch !important;
@@ -324,7 +325,7 @@
 
             <p>As the clock was winding down in the semifinal, I had already decided I was going to attend the gold medal game no matter how expensive it was going to be. Thankfully, I had some intel - shoutout to John back home for sending me a link, even if I didn’t trust it at the time - on a resale app that actually resulted in the tickets actually being transferred to the Olympic app after having seen Davidson successfully use it at the bar earlier in the day. I found a “partially obstructed” lower bowl seat, which I had to check out for myself. As it turns out, it was only a couple sections over from where I sat and directly next to the USA women’s team who were having fun watching the men and still celebrating their own gold. I watched them take a group picture with their superfan Jason Kelce, then gave captain Hilary Knight a congratulatory fist bump and “hell yeah!” as I walked by. The seat wasn’t going to be obstructed at all, it would be perfect. With that the semis were wrapped up and I was all set for Sunday so it was time to go.</p>
 
-            <div class="photo-row unmatched-height-row">
+            <div class="photo-row match-height">
                 <div class="item">
                     <img src="women-team-stands.jpg" class="match-lead" alt="Women's team cheering">
                     <span class="caption">Women's team taking a pic while cheering on the men.</span>
