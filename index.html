@@ -75,10 +75,12 @@
     
     /* SHARED PHOTO CONTAINER STYLES */
     .photo-box, .photo-row, .photo-row-offset {
-        margin: 3rem -4rem;
+        margin: 3rem 0; /* Reset to 0 to keep the black boxes inside the page margins */
         background: #111;
         padding: 20px;
         box-sizing: border-box;
+        border-radius: 4px;
+        overflow: hidden;
     }
 
     /* SINGLE PHOTO */
@@ -119,24 +121,34 @@
 
     /* --- THE UNMATCHED ROW FIX --- */
     .unmatched-height-row {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
         align-items: flex-start !important;
     }
     
-    /* Let the images define the column width instead of forcing 50/50 */
     .unmatched-height-row .item {
-        flex: none !important;
+        flex: 0 1 auto !important; /* Allows shrinking but maintains relative width */
+        min-width: 0;
         width: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .unmatched-height-row img.match-lead {
         height: auto;
-        max-height: 400px; /* Ceiling for the wide arena photo */
+        max-height: 400px;
+        max-width: 100%;
+        border: 3px solid white;
     }
     
     .unmatched-height-row img.match-follower {
         height: 100% !important;
         width: auto !important; 
+        max-width: 100%;
         object-fit: contain !important;
+        border: 3px solid white;
     }
     /* ----------------------------- */
 
@@ -198,17 +210,18 @@
     /* MOBILE OPTIMIZATION */
     @media (max-width: 768px) {
         .container { padding: 2rem 1.5rem; width: 95%; margin: -1rem auto 2rem; box-sizing: border-box; }
-        .photo-row { flex-direction: column; margin: 2rem -1.5rem; }
+        .photo-row, .unmatched-height-row { flex-direction: column; margin: 2rem -1.5rem; }
         .photo-row-offset { grid-template-columns: 1fr; margin: 2rem -1.5rem; }
         
         .photo-row img, 
-        .photo-row-offset img { 
-            height: auto; 
-            width: 100%;
-            max-height: none;
+        .photo-row-offset img,
+        .unmatched-height-row img.match-lead,
+        .unmatched-height-row img.match-follower { 
+            height: auto !important; 
+            width: 100% !important;
+            max-height: none !important;
         } 
         
-        /* Reset the fix for mobile so items stack full width */
         .unmatched-height-row .item {
             width: 100% !important;
         }
