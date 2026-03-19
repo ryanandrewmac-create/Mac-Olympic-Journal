@@ -117,36 +117,40 @@
         display: block;
     }
 
-    /* --- THE UNMATCHED ROW FIX --- */
+/* --- THE UNMATCHED ROW FIX --- */
     .unmatched-height-row {
         display: flex !important;
         gap: 15px;
         justify-content: center;
-        align-items: stretch !important; 
+        /* Aligns items to the top; height is determined by the natural height of the Lead */
+        align-items: flex-start !important; 
     }
     
     .unmatched-height-row .item {
-        flex: 0 1 auto !important; 
+        flex: 1; /* Allows both columns to negotiate space equally */
         display: flex;
         flex-direction: column;
+        /* This is the key: forces the item to be as tall as the row's tallest point */
+        align-self: stretch; 
     }
 
     .unmatched-height-row img {
         border: 3px solid white;
         display: block;
+        width: 100%; /* Ensures they fill the horizontal space of their 'item' */
     }
 
     .unmatched-height-row img.match-lead {
         height: auto;
-        max-height: 400px; 
-        max-width: 100%;
+        max-height: 500px; /* Increased for that 'blown up' look you wanted */
+        object-fit: contain;
     }
     
     .unmatched-height-row img.match-follower {
-        height: 100% !important; 
-        width: auto !important;
-        max-width: 100%;
-        object-fit: cover !important; 
+        /* Force this image to take up all available vertical space in the item */
+        flex-grow: 1;
+        height: 0; /* Standard CSS trick to let flex-grow take over height calculation */
+        object-fit: cover; /* Crops the vertical photo to match the Lead's height exactly */
     }
 
     .caption {
