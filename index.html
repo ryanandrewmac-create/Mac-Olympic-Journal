@@ -91,18 +91,28 @@
         border: 4px solid white;
     }
     
-    /* 50/50 ROW */
+/* 50/50 ROW */
     .photo-row {
         display: flex;
         gap: 15px;
         justify-content: center;
     }
-    .photo-row .item { flex: 1; text-align: center; }
+
+    /* This forces the caption to go BELOW the image instead of beside it */
+    .photo-row .item { 
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+    }
+
     .photo-row img {
         width: 100%;
-        height: auto; /* Keeps natural aspect ratio for even pairs */
+        height: auto; 
         border: 3px solid white;
         object-fit: cover;
+        display: block;
     }
     
     /* 2/3 and 1/3 ROW (THE FIX) */
@@ -111,15 +121,22 @@
         grid-template-columns: 2fr 1fr;
         gap: 15px;
     }
-    .photo-row-offset .item { text-align: center; }
+
+    /* Applying the same vertical stack to the offset row items */
+    .photo-row-offset .item { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+    }
+
     .photo-row-offset img {
         width: 100%;
         height: 350px; /* MATCHED HEIGHT */
         border: 3px solid white;
-        object-fit: cover; /* CROPS TO FIT WITHOUT SQUISHING */
+        object-fit: cover; 
         display: block;
     }
-
     .caption {
         display: block;
         font-size: 0.9rem;
