@@ -118,12 +118,12 @@
         display: block;
     }
 
-    /* --- THE UNMATCHED ROW FIX (RE-RE-BOOT) --- */
+    /* --- THE UNMATCHED ROW FIX --- */
     .unmatched-height-row {
         display: flex !important;
         gap: 15px;
         justify-content: center;
-        align-items: stretch !important; /* Force items to be same height */
+        align-items: stretch !important; 
     }
     
     .unmatched-height-row .item {
@@ -137,27 +137,17 @@
         display: block;
     }
 
-    /* Lead image sets the pace */
     .unmatched-height-row img.match-lead {
         height: auto;
         max-height: 400px; 
         max-width: 100%;
     }
     
-    /* Follower image is forced to fill the container vertically */
     .unmatched-height-row img.match-follower {
         height: 100% !important; 
         width: auto !important;
         max-width: 100%;
         object-fit: cover !important; 
-    }
-    /* ----------------------------- */
-
-    .photo-row-offset {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 15px;
-        align-items: center;
     }
 
     .caption {
@@ -171,6 +161,18 @@
         width: 100%;
         box-sizing: border-box;
         margin-top: auto; 
+    }
+
+    /* DEDICATION SECTION */
+    .dedication {
+        margin-top: 8rem;
+        padding-top: 3rem;
+        border-top: 2px solid var(--usa-red);
+        font-style: italic;
+        text-align: center;
+        font-size: 1.4rem;
+        color: var(--usa-blue);
+        line-height: 1.6;
     }
     
     footer {
@@ -192,6 +194,7 @@
             width: 100% !important;
             max-height: none !important;
         } 
+        .dedication { margin-top: 4rem; font-size: 1.2rem; }
     }
 </style>
 </head>
