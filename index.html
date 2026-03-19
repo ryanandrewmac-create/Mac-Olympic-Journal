@@ -111,6 +111,10 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 15px;
+            margin: 3rem -4rem;
+            background: #111;
+            padding: 20px;
+            align-items: start; /* Keeps the top of the photos aligned */
         }
         .photo-row-offset .item { 
             text-align: center; 
@@ -120,9 +124,9 @@
         .photo-row img, 
         .photo-row-offset img {
             width: 100%;
-            height: auto;
+            height: 350px;    /* Force both to this height */
+            object-fit: cover; /* Crop the edges so they don't stretch */
             border: 3px solid white;
-            object-fit: cover;
             display: block;
         }
 
