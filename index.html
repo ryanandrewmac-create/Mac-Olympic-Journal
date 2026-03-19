@@ -163,16 +163,18 @@
         margin-top: auto; 
     }
 
-    /* DEDICATION SECTION */
+/* DEDICATION SECTION */
     .dedication {
         margin-top: 8rem;
-        padding-top: 3rem;
-        border-top: 2px solid var(--usa-red);
+        padding: 4rem 2rem;           /* Adds space inside the blue box */
+        background-color: var(--usa-blue); /* Restores the popping blue */
+        color: white;                 /* Changes text to white for legibility */
         font-style: italic;
         text-align: center;
         font-size: 1.4rem;
-        color: var(--usa-blue);
         line-height: 1.6;
+        border-radius: 4px;           /* Optional: matches your page corners */
+        border-top: none;             /* Removed the red line, as the blue block is now distinct */
     }
     
     footer {
