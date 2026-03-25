@@ -204,6 +204,46 @@
         } 
         .dedication { margin-top: 4rem; font-size: 1.2rem; }
     }
+
+    /* NEW: Dedicated style for large horizontal videos */
+    .video-hero {
+        margin: 3rem -4rem;
+        background: #111;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .video-hero-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        width: 95%;           /* Fills the black box almost entirely */
+        margin: 0 auto;       /* Centers it */
+        border: 3px solid white;
+        background: #000;
+    }
+    
+    .video-hero-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .video-item .caption {
+        margin-top: 10px;
+        max-width: 80%; /* Keeps long captions from stretching too wide */
+    }
+    
 </style>
 </head>
 <body>
@@ -424,40 +464,27 @@
         </div>
     </article>
 
-    <div class="photo-box">
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/c7nnz46eXkY?modestbranding=1&rel=0&showinfo=0" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+    <div class="video-hero">
+        <div class="video-item" style="margin-bottom: 40px;">
+            <div class="video-hero-wrapper">
+                <iframe src="https://www.youtube.com/embed/c7nnz46eXkY?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <span class="caption">USA Women celebrate the gold.</span>
         </div>
-        <span class="caption">USA Women celebrate the gold</span>
-    </div>
-
-    <div class="photo-box">
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/ZwMh63rf6cs?modestbranding=1&rel=0&showinfo=0" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        
+        <div class="video-item" style="margin-bottom: 40px;">
+            <div class="video-hero-wrapper">
+                <iframe src="https://www.youtube.com/embed/ZwMh63rf6cs?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <span class="caption">The moments after USA Men won gold — excuse my yelling!</span>
         </div>
-        <span class="caption">The moments after USA Men won gold - excuse my yelling!</span>
-    </div>
-
-    <div class="photo-box">
-        <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/Iim4rWMIkfY?modestbranding=1&rel=0&showinfo=0" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+    
+        <div class="video-item">
+            <div class="video-hero-wrapper">
+                <iframe src="https://www.youtube.com/embed/Iim4rWMIkfY?modestbranding=1&rel=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <span class="caption">USA Men celebrate the gold.</span>
         </div>
-        <span class="caption">USA Men celebrate the gold</span>
     </div>
         
 </div>
